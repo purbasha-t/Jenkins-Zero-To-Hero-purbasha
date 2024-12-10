@@ -18,7 +18,7 @@ pipeline {
       }
     }
 
-    stage('Front-end') {
+    stage('last-end') {
       agent {
         docker { image 'openjdk:oraclelinux9' }
       }
