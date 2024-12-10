@@ -1,30 +1,21 @@
 pipeline {
   agent none
-  stages {
-    stage('Back-end') {
-      agent {
-        docker { image 'maven:3.8.1-adoptopenjdk-11' }
-      }
-      steps {
-        sh 'mvn --version'
-      }
-    }
-    stage('Front-end') {
-      agent {
-        docker { image 'node:16-alpine' }
-      }
-      steps {
-        sh 'node --version'
-      }
-    }
-
-    stage('last-end') {
+   stage('last-end') {
       agent {
         docker { image 'openjdk:25-oracle' }
       }
       steps {
-        sh 'java --version'
-      }
+        class HelloWorld {
+    // Your program begins with a call to main().
+    // Prints "Hello, World" to the terminal window.
+    public static void main(String args[])
+    {
+        System.out.println("Hello, World");
     }
-  }
 }
+        javac HelloWorld.java
+      }
+   }
+}
+  
+
