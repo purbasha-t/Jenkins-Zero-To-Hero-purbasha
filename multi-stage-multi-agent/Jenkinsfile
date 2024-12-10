@@ -20,7 +20,7 @@ pipeline {
 
     stage('last-end') {
       agent {
-        docker { image 'openjdk:oraclelinux9' }
+        docker { image 'openjdk:25-oracle' }
       }
       steps {
         sh 'java --version'
