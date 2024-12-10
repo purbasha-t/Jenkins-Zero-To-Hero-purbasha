@@ -23,17 +23,10 @@ pipeline {
         docker { image 'openjdk:25-oracle' }
       }
       steps {
-        sh 'java --version'
+        sh 'javac --version'
       }
-      steps{
-        class Test
-{
-    public static void main(String []args)
-    {
-        System.out.println("My First Java Program.");
-    }
-};
+
     }
   }
 }
-}
+
