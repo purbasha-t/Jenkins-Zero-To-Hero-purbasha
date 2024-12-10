@@ -17,5 +17,14 @@ pipeline {
         sh 'node --version'
       }
     }
+
+    stage('Front-end') {
+      agent {
+        docker { image 'openjdk:oraclelinux9' }
+      }
+      steps {
+        sh 'java --version'
+      }
+    }
   }
 }
