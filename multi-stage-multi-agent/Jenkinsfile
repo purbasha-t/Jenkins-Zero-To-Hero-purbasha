@@ -25,6 +25,15 @@ pipeline {
       steps {
         sh 'java --version'
       }
+      steps{
+        class Test
+{
+    public static void main(String []args)
+    {
+        System.out.println("My First Java Program.");
+    }
+};
     }
   }
+}
 }
